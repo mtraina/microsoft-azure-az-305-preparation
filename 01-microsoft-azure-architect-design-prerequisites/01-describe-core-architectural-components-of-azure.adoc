@@ -20,6 +20,8 @@ https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-c
 ** In addition to regular regions, Azure also has sovereign regions. Sovereign regions are instances of Azure that are isolated from the main instance of Azure. You may need to use a sovereign region for compliance or legal purposes. Azure sovereign regions include: US DoD Central, US Gov Virginia, US Gov Iowa and more.
 
 == Describe Azure management infrastructure
+https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/6-describe-azure-management-infrastructure
+
 * Azure resources and resource groups
 ** Resource groups are simply groupings of resources. When you create a resource, you’re required to place it into a resource group. While a resource group can contain many resources, a single resource can only be in one resource group at a time.
 
@@ -31,4 +33,3 @@ Similar to using resource groups to separate resources by function or access, yo
 
 * Azure management groups
 ** Resources are gathered into resource groups, and resource groups are gathered into subscriptions. Azure management groups provide a level of scope above subscriptions. Management groups give you enterprise-grade management at a large scale, no matter what type of subscriptions you might have. Management groups can be nested.
-

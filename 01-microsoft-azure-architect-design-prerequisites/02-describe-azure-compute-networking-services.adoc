@@ -1,0 +1,73 @@
+== Describe Azure virtual machines
+https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/2-virtual-machines
+
+* VMs provide infrastructure as a service (IaaS) in the form of a virtualized server and can be used in many ways. VMs are an ideal choice when you need:
+
+** Total control over the operating system (OS).
+** The ability to run custom software.
+** To use custom hosting configurations.
+
+== Scale VMs in Azure
+* Virtual machine scale sets
+** Virtual machine scale sets let you create and manage a group of identical, load-balanced VMs.
+** Azure automates most of that work. Scale sets allow you to centrally manage, configure, and update a large number of VMs in minutes. 
+* Virtual machine availability sets
+** Tool to help you build a more resilient, highly available environment. Availability sets are designed to ensure that VMs stagger updates and have varied power and network connectivity, preventing you from losing all your VMs with a single network or power failure.
+** This is done by grouping VMs in two ways: update domain and fault domain.
+*** *Update domain*: The update domain groups VMs that can be rebooted at the same time. This allows you to apply updates while knowing that only one update domain grouping will be offline at a time. 
+*** *Fault domain*: The fault domain groups your VMs by common power source and network switch. By default, an availability set will split your VMs across up to three fault domains. This helps protect against a physical power or networking failure by having VMs in different fault domains (thus being connected to different power and networking resources).
+** There’s no additional cost for configuring an availability set. You only pay for the VM instances you create.
+
+== Describe Azure virtual desktop
+https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/4-virtual-desktop
+
+* Azure Virtual Desktop is a desktop and application virtualization service that runs on the cloud. It enables you to use a cloud-hosted version of Windows from any location. Azure Virtual Desktop works across devices and operating systems, and works with apps that you can use to access remote desktops or most modern browsers.
+
+== Describe Azure containers
+* What are containers?
+** Containers are a virtualization environment. Much like running multiple virtual machines on a single physical host, you can run multiple containers on a single physical or virtual host. 
+** Containers are lightweight and designed to be created, scaled out, and stopped dynamically. 
+** Containers are designed to allow you to respond to changes on demand. With containers, you can quickly restart if there's a crash or hardware interruption. 
+** One of the most popular container engines is Docker, and Azure supports Docker.
+
+* Azure Container Instances
+** They offer the fastest and simplest way to run a container in Azure; without having to manage any virtual machines or adopt any additional services. 
+** Azure Container Instances are a platform as a service (PaaS) offering. 
+** Azure Container Instances allow you to upload your containers and then the service will run the containers for you.
+
+* Azure Container Apps
+** They are similar in many ways to a container instance and they're a PaaS offering. 
+** Container Apps have extra benefits such as the ability to incorporate load balancing and scaling. 
+** These other functions allow you to be more elastic in your design.
+
+* Azure Kubernetes Service
+** Azure Kubernetes Service (AKS) is a container orchestration service. 
+** An orchestration service manages the lifecycle of containers. 
+** When you're deploying a fleet of containers, AKS can make fleet management simpler and more efficient.
+
+== Describe Azure functions
+https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/6-functions
+
+* Azure Functions
+** Azure Functions is an event-driven, serverless compute option that doesn’t require maintaining virtual machines or containers. 
+** If you build an app using VMs or containers, those resources have to be “running” in order for your app to function. 
+** With Azure Functions, an event wakes the function, alleviating the need to keep resources provisioned when there are no events.
+
+* Benefits of Azure Functions
+** Functions scale automatically based on demand, so they may be a good choice when demand is variable.
+** Azure Functions runs your code when it's triggered and automatically deallocates resources when the function is finished. 
+** In this model, you're only charged for the CPU time used while your function runs.
+** Functions can be either stateless or stateful. 
+*** When they're stateless (the default), they behave as if they're restarted every time they respond to an event. 
+*** When they're stateful (called Durable Functions), a context is passed through the function to track prior activity.
+
+== Describe application hosting options
+* Azure App Service
+** App Service enables you to build and host web apps, background jobs, mobile back-ends, and RESTful APIs in the programming language of your choice without managing infrastructure. 
+** It offers automatic scaling and high availability. 
+** App Service supports Windows and Linux. It enables automated deployments from GitHub, Azure DevOps, or any Git repo to support a continuous deployment model.
+** Azure App Service is an HTTP-based service for hosting web applications, REST APIs, and mobile back ends. 
+** It supports multiple languages, including .NET, .NET Core, Java, Ruby, Node.js, PHP, or Python. 
+** It also supports both Windows and Linux environments.
+
+* Types of app services
